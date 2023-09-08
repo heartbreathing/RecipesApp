@@ -1,9 +1,15 @@
 import express from "express";
 import cors from 'cors';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 import { userRouter } from "./routes/users.js";
 import { recipesRouter } from "./routes/recipes.js";
+
+// Load environment variables from .env file
+dotenv.config();
+
+const mongodbPassword = process.env.MONGODB_PASSWORD;
 
 const app = express();
 
@@ -14,12 +20,12 @@ app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
 
-// using environmental password instead of "MERNpassword123"
-mongoose.connect("mongodb+srv://emmaW:MERNpassword123@recipes.k9ropze.mongodb.net/recipes?retryWrites=true&w=majority",
-// {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   }
+// using environmental password 
+mongoose.connect(`mongodb+srv://emmaW:${mongodbPassword}@recipes.k9ropze.mongodb.net/recipes?retryWrites=true&w=majority`,
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  }
 );
 
 app.listen(3001, () => console.log('SERVER STARTED！'));
