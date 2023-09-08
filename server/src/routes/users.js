@@ -37,8 +37,8 @@ router.post("/login", async (req, res) => {
       .status(400)
       .json({ message: "Username or password is incorrect" });
   }
-  // creating an environment variable instead of "secret"
-  const token = jwt.sign({ id: user._id }, "secret");
+  // using an environment variable 
+  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
   res.json({ token, userID: user._id });
 });
 
