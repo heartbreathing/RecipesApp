@@ -49,8 +49,10 @@ export const Home = () => {
 
   return (
     <div>
-      <h1>Recipes</h1>
-      <ul>
+      <div className="center-h1">
+        <h1>Recipes</h1>
+      </div>
+      <ul className="content-container">
         {recipes.map((recipe) => (
           <li key={recipe._id}>
             <div>

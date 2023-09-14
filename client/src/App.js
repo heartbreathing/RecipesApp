@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/navbar";
+import {Footer} from "./components/footer"
 import { Auth } from "./pages/auth";
 import { CreateRecipe } from "./pages/create-recipe";
 import { Home } from "./pages/home";
@@ -18,6 +19,7 @@ function App () {
           <Route path="/auth" element={<Auth />} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }
