@@ -72,15 +72,6 @@ button {
  
 }
 
-.rainbow-text {
-  background-image: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33ff00, #0066ff, #9900ff, #ff00cc);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow 10s linear infinite;
-}
-
 
 
 
@@ -96,12 +87,21 @@ button {
   text-decoration: none;
 }
 
+.navbar-link:hover {
+  font-weight: bold; 
+  color: gray; 
+}
+.navbar-link:active,
+.navbar-link:focus {
+  font-weight: bold!important;
+}
+
 a {
   color: gray;
   text-decoration: none;
   margin: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5rem;  
+  font-family: "Segoe UI";
 }
 
 .log-button{
