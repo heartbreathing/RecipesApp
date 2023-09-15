@@ -69,6 +69,7 @@ button {
   border: none; 
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+ 
 }
 
 .rainbow-text {
@@ -107,6 +108,7 @@ a {
   height:25px;
   margin: 20px;
   color: darkgray;
+  
 }
 
 .create-recipe {
