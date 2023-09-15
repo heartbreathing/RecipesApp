@@ -30,4 +30,4 @@ mongoose.connect(`mongodb+srv://emmaW:${mongodbPassword}@recipes.k9ropze.mongodb
 
 app.listen(3001, () => console.log('SERVER STARTED！'));
 
-
+export default app;
