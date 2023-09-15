@@ -7,12 +7,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/*body {
-  margin: 0;
-  padding: 0;
-}*/
 
 body {
+  margin: 0;
+  padding: 0;
   display: flex; 
   flex-direction: column; 
   min-height: 100vh; 
@@ -66,6 +64,12 @@ input {
  
 }
 
+button {
+  margin-top:10px;
+  border: none; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
 
 .rainbow-text {
   background-image: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33ff00, #0066ff, #9900ff, #ff00cc);
@@ -80,10 +84,10 @@ input {
 
 
 .navbar {
-  margin: 0;
+  margin: 0px;
   width: 100%;
   height: 80px;
-  background-color: gray;
+  background-color: lightgray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,11 +96,17 @@ input {
 }
 
 a {
-  color: white;
+  color: gray;
   text-decoration: none;
-  margin: 10px;
+  margin: 20px;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.log-button{
+  height:25px;
+  margin: 20px;
+  color: darkgray;
 }
 
 .create-recipe {
@@ -105,6 +115,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  padding-bottom:200px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -119,7 +130,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 40px; 
-  padding-bottom: 120px;
+  padding-bottom: 200px;
 }
 
 li {
@@ -146,6 +157,7 @@ img {
 p {
   max-width: 400px;
   font-size: 12px;
+  margin:10px;
 }
 
 .footer {
@@ -153,23 +165,25 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  background-color: gray;
-  color: white;
+  height: 200px;
+  background-color: lightgray;
+  color: gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  
  
 }
 
 .icon-links {
   display: flex;
   gap: 10px;
-  padding: 0 30px;
+  padding: 0 50px;
 }
 .footer h3 {
   margin-right: 10px;
+  padding:0 30px;
 }
 
 
@@ -177,6 +191,7 @@ p {
 @media (max-width: 768px) {
  a {
   font-size: 1rem; 
+  margin:10px;
 }
   ul {
     grid-template-columns: 1fr; 
@@ -187,5 +202,8 @@ p {
 
   .auth-container {
     width: 100%; 
+  }
+  .footer {
+    padding:20px;
   }
 }
