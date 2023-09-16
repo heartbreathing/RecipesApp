@@ -28,7 +28,7 @@ export const SavedRecipes = () => {
      
       <ul>
         {savedRecipes.map((recipe) => (
-          <li key={recipe._id}>
+          <li key={recipe._id} className="recipe-container">
             <div>
               <h2>{recipe.name}</h2>
             </div>

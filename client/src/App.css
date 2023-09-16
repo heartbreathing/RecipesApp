@@ -26,8 +26,12 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f2f2f2;
+  margin-bottom:220px;
 }
-
+.recipe-container{
+  border: none; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 .auth-container {
   display: flex;
   flex-direction: column;
@@ -50,28 +54,41 @@ body {
 
 label {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 2px 10px;
+   
 }
 
 input {
   padding: 10px;
   font-size: 16px;
+  border:none;
   border-radius: 5px;
+  margin-bottom:10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+textarea{
+  border:none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 .center-h1 {
   text-align: center;
  
 }
 
 button {
-  margin-top:10px;
+  
+  padding:10px 20px;
   border: none; 
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
+  border-radius: 5px;
  
 }
-
+ button:hover{
+  background-color:darkgray;
+  color:white;
+ }
 
 
 
@@ -104,25 +121,18 @@ a {
   font-family: "Segoe UI";
 }
 
-.log-button{
-  height:25px;
-  margin: 20px;
-  color: darkgray;
-  
-}
-
 .create-recipe {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  padding-bottom:200px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 20px;
   width: 400px;
+  margin-bottom:250px;
 }
 .create-recipe form {
   display: flex;
@@ -173,9 +183,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  
- 
+  padding: 0 20px; 
 }
 
 .icon-links {
@@ -204,6 +212,7 @@ p {
 
   .auth-container {
     width: 100%; 
+    
   }
   .footer {
     padding:20px;
