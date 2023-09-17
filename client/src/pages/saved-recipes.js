@@ -21,14 +21,14 @@ export const SavedRecipes = () => {
     fetchSavedRecipes();
   }, [userID]);
   return (
-    <div>
+    <div className="main-container">
       <div className="center-h1">
         <h1>Saved Recipes</h1>
       </div>
      
       <ul>
         {savedRecipes.map((recipe) => (
-          <li key={recipe._id}>
+          <li key={recipe._id} className="recipe-container">
             <div>
               <h2>{recipe.name}</h2>
             </div>
