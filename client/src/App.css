@@ -21,7 +21,7 @@ body {
 }
 
 .auth {
-  display: flex;
+  disprecipe-containerlay: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -172,9 +172,13 @@ p {
   margin:10px;
 }
 
-.footer {
- 
-  bottom: 0;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {  
   left: 0;
   width: 100%;
   height: 200px;

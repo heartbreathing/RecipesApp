@@ -10,7 +10,7 @@ import { SavedRecipes } from "./pages/saved-recipes";
 function App () {
   return (
     <div className="App">
-      <Router>
+      <Router className="main-container">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
