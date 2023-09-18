@@ -48,7 +48,7 @@ export const Home = () => {
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
-    <div>
+    <div className="main-container">
       <div className="center-h1">
         <h1>Recipes</h1>
       </div>
