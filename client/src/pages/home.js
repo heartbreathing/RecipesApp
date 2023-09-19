@@ -64,11 +64,20 @@ export const Home = () => {
                 {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
               </button>
             </div>
-            <div className="instructions">
+            <p>{recipe.description}</p>
+            <img src={recipe.imageUrl} alt={recipe.name} />
+            <h4>Ingredients:</h4>
+            <div className="recipe-text">
+              {recipe.ingredients.map((ingredient, index) => (
+                <p key={index}>{ingredient}</p>
+              ))}
+            </div>
+            <h4>Instructions:</h4>
+            <div className="recipe-text">
               <p>{recipe.instructions}</p>
             </div>
-            <img src={recipe.imageUrl} alt={recipe.name} />
-            <p>Cooking Time: {recipe.cookingTime} minutes</p>
+            <h4>Cooking Time:</h4>
+            <p>{recipe.cookingTime} minutes</p>
           </li>
         ))}
       </ul>

@@ -20,6 +20,7 @@ router.post("/",async (req, res) => {
   const recipe = new RecipesModel({
     _id: new mongoose.Types.ObjectId(),
     name: req.body.name,
+    description: req.body.description,
     image: req.body.image,
     ingredients: req.body.ingredients,
     instructions: req.body.instructions,
@@ -28,13 +29,14 @@ router.post("/",async (req, res) => {
     userOwner: req.body.userOwner,
   });
   console.log(recipe);
-  // const recipe = new RecipesModel(req.body);
+  
   try {
     const result = await recipe.save();
-    // res.json(result);
+    
     res.status(201).json({
       createdRecipe: {
         name: result.name,
+        description: result.description,
         image: result.image,
         ingredients: result.ingredients,
         instructions: result.instructions,
